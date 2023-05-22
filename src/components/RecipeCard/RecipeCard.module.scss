@@ -1,0 +1,25 @@
+.recipe-card {
+  background-color: #E4F3FC;
+  padding: 20px;
+  width: 400px;
+  border-radius: 20px;
+
+  &__thumb {
+    img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &--title {
+      font-weight: bold;
+      font-size: 22px;
+    }
+  }
+}
