@@ -8,7 +8,7 @@ function App() {
       <Header logo="CookVegan" />
       <RecipeCard
         title="Couve Flor empanada"
-        duration="30 min"
+        duration="30 min."
         altImg="Gril chicken"
         thumb="https://i.ytimg.com/vi/1onqvN1rNUU/maxresdefault.jpg"
       />
