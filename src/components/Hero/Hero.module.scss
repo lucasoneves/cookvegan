@@ -1,0 +1,9 @@
+.hero {
+  height: 70vh;
+  background: linear-gradient(to right, var(--spiro), transparent 50%);
+  font-size: 22px;
+}
+
+.container {
+  @include container;
+}
