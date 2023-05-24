@@ -8,13 +8,12 @@
   --ending: #182C61;
 
   --radius: 8px;
+
+  --container-width: 940px;
 }
 
 .container {
-  width: 100%;
-  max-width: 940px;
-  margin: 0 auto;
-  padding: 0 15px;
+  @include container;
 }
 
 body {
