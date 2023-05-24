@@ -14,7 +14,7 @@ export const RecipeCard = ({
   return (
     <div className={styles["recipe-card"]}>
       <div className={styles["recipe-card__thumb"]}>
-        <img src={thumb} alt={altImg} />
+        {thumb && <img src={thumb} alt={altImg} />}
       </div>
         <span className={styles["recipe-card__info--title"]}>{title}</span>
       <div className={styles["recipe-card__info"]}>

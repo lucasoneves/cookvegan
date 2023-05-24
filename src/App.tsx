@@ -1,17 +1,23 @@
 import "./assets/css/App.css";
+import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import { Hero } from "./components/Hero";
 import { RecipeCard } from "./components/RecipeCard";
 
 function App() {
   return (
     <>
       <Header logo="CookVegan" />
-      <RecipeCard
-        title="Couve Flor empanada"
-        duration="30 min."
-        altImg="Gril chicken"
-        thumb="https://i.ytimg.com/vi/1onqvN1rNUU/maxresdefault.jpg"
-      />
+      <Hero />
+      <div className="container">
+        <RecipeCard
+          title="Couve Flor empanada"
+          duration="30 min."
+          altImg="Gril chicken"
+          thumb=""
+        />
+      </div>
+      <Footer />
     </>
   );
 }

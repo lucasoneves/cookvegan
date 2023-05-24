@@ -23,7 +23,7 @@ html {
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -260,6 +260,14 @@ legend {
 
 progress {
   vertical-align: baseline;
+}
+
+/**
+* Remove initial styles from the ul element.
+*/
+
+ul {
+  list-style: none;
 }
 
 /**
