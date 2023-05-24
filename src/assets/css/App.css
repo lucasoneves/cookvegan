@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  font-family: 'Playfair Display', 'Helvetica', 'Arial', serif;
+}
