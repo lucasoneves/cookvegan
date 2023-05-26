@@ -7,8 +7,8 @@ import { RecipeCard } from "./components/RecipeCard";
 function App() {
   return (
     <>
-      <Header logo="CookVegan" />
-      <Hero />
+      <Header logo="Cook Vegan" />
+      <Hero description="Descubra novos sabores através de receitas livres de crueldade animal"/>
       <div className="container">
         <RecipeCard
           title="Couve Flor empanada"
