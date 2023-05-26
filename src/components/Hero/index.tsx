@@ -1,10 +1,14 @@
 import styles from "./Hero.module.scss";
 
-export const Hero = () => {
+type HeroSectionProps = {
+  description: string,
+}
+
+export const Hero = ({description}: HeroSectionProps) => {
   return (
     <article className={styles["hero"]}>
       <div className={styles['container']}>
-        <h2>Descubra novas receitas e sabores, em versões veganas.</h2>
+        <h2>{description}</h2>
       </div>
     </article>
   );

@@ -1,7 +1,12 @@
 import { Navbar } from "../Navbar";
 import styles from "./Header.module.scss";
+// import PropTypes from 'prop-types'
 
-export const Header = ({ logo }: { logo: string }) => {
+type HeaderProps = {
+  logo: string;
+}
+
+export const Header = ({ logo } : HeaderProps) => {
   return (
     <header className={styles["header"]}>
       <div className={styles['container']}>
