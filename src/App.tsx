@@ -8,14 +8,16 @@ function App() {
   return (
     <>
       <Header logo="Cook Vegan" />
-      <Hero description="Descubra novos sabores através de receitas livres de crueldade animal"/>
+      <Hero description="Experimente novos sabores através de receitas veganas" />
       <div className="container">
-        <RecipeCard
-          title="Couve Flor empanada"
-          duration="30 min."
-          altImg="Gril chicken"
-          thumb=""
-        />
+        <div className="recipe-list">
+          <RecipeCard
+            title="Couve Flor empanada"
+            duration="30 min."
+            altImg="Gril chicken"
+            thumb=""
+          />
+        </div>
       </div>
       <Footer />
     </>

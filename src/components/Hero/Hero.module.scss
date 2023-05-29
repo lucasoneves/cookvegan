@@ -1,9 +1,26 @@
 .hero {
-  height: 70vh;
+  height: calc(90vh - 100px);
   background: linear-gradient(to right, var(--spiro), transparent 50%);
   font-size: 22px;
+  background: url("https://www.inspiredtaste.net/wp-content/uploads/2018/05/Homemade-Mushroom-Veggie-Burger-Recipe-1200.jpg")
+    no-repeat top right;
+  background-position: center;
+  background-size: cover;
 }
 
 .container {
   @include container;
+}
+
+.wallpaper {
+  height: 100%;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(45deg, #043f39, #48116bad);
+  color: #fff;
+  height: 100%;
+  font-size: 35px;
 }
