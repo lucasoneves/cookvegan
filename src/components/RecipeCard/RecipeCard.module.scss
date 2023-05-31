@@ -1,12 +1,14 @@
 .recipe-card {
   background-color: #E4F3FC;
   padding: 20px;
-  width: 400px;
+  width: 100%;
   border-radius: 20px;
 
   &__thumb {
     img {
       width: 100%;
+      min-height: 300px;
+      background-color: #e7e0e0;
       border-radius: 20px;
       margin-bottom: 20px;
     }
