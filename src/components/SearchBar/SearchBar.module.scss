@@ -1,0 +1,16 @@
+.search-bar {
+  margin-top: 40px;
+  font-size: 20px;
+
+  input {
+    font-size: inherit;
+    padding: $main-padding;
+    border-radius: $main-radius;
+  }
+}
+
+.form {
+  display: flex;
+  gap: $main-gap;
+  flex-wrap: wrap;
+}
