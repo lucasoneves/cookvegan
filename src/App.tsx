@@ -4,13 +4,15 @@ import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { RecipeList } from "./components/RecipeList";
-import { RecipeCard } from "./components/RecipeCard";
+import { SearchBar } from "./components/SearchBar";
 
 function App() {
   return (
     <>
       <Header logo="Cook Vegan" />
-      <Hero description="Experimente novos sabores através de receitas veganas" />
+      <Hero description="Experimente novos sabores através de receitas veganas">
+        <SearchBar title="Procure uma receita"></SearchBar>
+      </Hero>
       <div className="container">
         <RecipeList />
       </div>

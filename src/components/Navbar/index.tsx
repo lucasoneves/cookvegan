@@ -5,6 +5,7 @@ export const Navbar = () => {
     <ul className={styles['navbar-list']}>
       <li>Home</li>
       <li>Receitas</li>
+      <li>Enviar receita</li>
       <li>Contato</li>
       <li>Apoie</li>
       <li>Loja</li>
