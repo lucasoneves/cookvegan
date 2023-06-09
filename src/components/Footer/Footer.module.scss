@@ -1,0 +1,19 @@
+.footer {
+  background: linear-gradient(to right bottom, $keppel, $ending);
+  color: #f3f3f3;
+}
+.container {
+  @include container;
+}
+
+.sitemap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  li {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+}
