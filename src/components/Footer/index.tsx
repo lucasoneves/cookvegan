@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Footer.module.scss";
 import navData from "../../data/nav";
+import { Link } from "react-router-dom";
 
 type Navigation = {
   title: string;
@@ -17,7 +18,7 @@ export const Footer = () => {
           <nav>
             <ul>
               {menu.map((item) => (
-                <li>{item.title}</li>
+                <li key={item.path}><Link to={`/${item.path}`}>{item.title}</Link></li>
               ))}
             </ul>
           </nav>
