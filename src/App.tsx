@@ -14,7 +14,7 @@ function App() {
         <SearchBar title="Procure uma receita"></SearchBar>
       </Hero>
       <div className="container">
-        <RecipeList />
+        <RecipeList titleList="Adicionadas recentemente:" />
       </div>
       <Footer />
     </>

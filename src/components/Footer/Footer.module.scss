@@ -1,19 +1,22 @@
 .footer {
   background: linear-gradient(to right bottom, $keppel, $ending);
   color: #f3f3f3;
+  padding: 50px 0;
+  margin-top: 100px;
 }
 .container {
   @include container;
+  text-align: center;
 }
 
 .sitemap {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  text-align: center;
 
-  li {
-    &:not(:first-child) {
-      margin-top: 20px;
-    }
+  ul {
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    margin: 40px 0;
+    font-size: 14px;
   }
 }
