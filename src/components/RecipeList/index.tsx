@@ -1,10 +1,17 @@
-import { useState, useEffect } from 'react';
-import { RecipeCard } from '../RecipeCard';
+import { useState, useEffect } from "react";
+import { RecipeCard } from "../RecipeCard";
 
-import styles from './RecipeList.module.scss';
+import styles from "./RecipeList.module.scss";
 
-export const RecipeList = () => {
-  const [recipeData, setRecipeData] = useState([]);
+type RecipeItem = {
+  id: string;
+  title: string;
+  duration: number;
+  thumb: string;
+};
+
+export const RecipeList = ({ titleList }: { titleList: string }) => {
+  const [recipeData, setRecipeData] = useState<RecipeItem[]>([]);
 
   useEffect(() => {
     getRecipeData();
@@ -24,18 +31,21 @@ export const RecipeList = () => {
     }
   }
   return (
-    <div className={styles['recipe-list']}>
-      {recipeData.map((recipe) => {
-        return (
-          <RecipeCard
-            key={recipe.id}
-            title={recipe.title}
-            duration={`${new Date(recipe.duration).getMinutes()} minutos`}
-            altImg={recipe.title}
-            thumb={recipe.thumb}
-          />
-        );
-      })}
+    <div className={styles["wrapper"]}>
+        <h2 className={styles['title-list']}>{titleList}</h2>
+      <div className={styles["recipe-list"]}>
+        {recipeData.map((recipe) => {
+          return (
+            <RecipeCard
+              key={recipe.id}
+              title={recipe.title}
+              duration={`${new Date(recipe.duration).getMinutes()} minutos`}
+              altImg={recipe.title}
+              thumb={recipe.thumb}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
