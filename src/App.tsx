@@ -1,5 +1,4 @@
 import "./assets/css/App.scss";
-import { useEffect, useState } from "react";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
@@ -10,7 +9,8 @@ function App() {
   return (
     <>
       <Header logo="Cook Vegan" />
-      <Hero description="Experimente novos sabores através de receitas veganas">
+      <Hero>
+        <h2>Experimente novos sabores através de <strong>receitas veganas</strong></h2>
         <SearchBar title="Procure uma receita"></SearchBar>
       </Hero>
       <div className="container">

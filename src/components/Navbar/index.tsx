@@ -1,15 +1,17 @@
-import styles from './Navbar.module.scss';
+import styles from "./Navbar.module.scss";
+import navBarList from "../../data/nav";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
-  return <nav className={styles['navbar']}>
-    <ul className={styles['navbar-list']}>
-      <li>Home</li>
-      <li>Receitas</li>
-      <li>Enviar receita</li>
-      <li>Contato</li>
-      <li>Apoie</li>
-      <li>Loja</li>
-      <li>Newsletter</li>
-    </ul>
-  </nav>
-}
+  return (
+    <nav className={styles["navbar"]}>
+      <ul className={styles["navbar-list"]}>
+        {navBarList.map((item) => (
+          <li key={item.path}>
+            <Link to={`/${item.path}`}>{ item.title }</Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
