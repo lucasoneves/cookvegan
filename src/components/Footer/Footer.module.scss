@@ -6,6 +6,7 @@
 }
 .container {
   @include container;
+  padding: $container-padding;
   text-align: center;
 }
 
@@ -14,9 +15,17 @@
 
   ul {
     display: flex;
-    gap: 10px;
-    justify-content: space-evenly;
+    gap: 50px;
+    justify-content: center;
     margin: 40px 0;
     font-size: 14px;
+
+    a {
+      color: white;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
   }
 }

@@ -15,16 +15,20 @@ export default [
     "title": "Contact",
     "path": "/contact"
   },
+  // {
+  //   "title": "Support",
+  //   "path": "/support"
+  // },
+  // {
+  //   "title": "Store",
+  //   "path": "/store"
+  // },
+  // {
+  //   "title": "Newsletter",
+  //   "path": "/newsletter"
+  // },
   {
-    "title": "Support",
-    "path": "/support"
-  },
-  {
-    "title": "Store",
-    "path": "/store"
-  },
-  {
-    "title": "Newsletter",
-    "path": "/newsletter"
+    "title": "Login",
+    "path": "/login"
   }
 ]

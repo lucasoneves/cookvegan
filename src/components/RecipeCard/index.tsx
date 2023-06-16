@@ -1,4 +1,6 @@
 import styles from "./RecipeCard.module.scss";
+import { MdFavoriteBorder } from 'react-icons/md';
+
 
 export const RecipeCard = ({
   title,
@@ -23,7 +25,7 @@ export const RecipeCard = ({
             {duration}
           </span>
           <span className={styles["recipe-card__info--favorite"]}>
-            favoritar
+            <MdFavoriteBorder />
           </span>
         </div>
       </div>

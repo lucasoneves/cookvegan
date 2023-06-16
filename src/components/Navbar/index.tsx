@@ -8,7 +8,7 @@ export const Navbar = () => {
       <ul className={styles["navbar-list"]}>
         {navBarList.map((item) => (
           <li key={item.path}>
-            <Link to={`/${item.path}`}>{ item.title }</Link>
+            <Link to={item.path}>{item.title}</Link>
           </li>
         ))}
       </ul>

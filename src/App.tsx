@@ -10,11 +10,11 @@ function App() {
     <>
       <Header logo="Cook Vegan" />
       <Hero>
-        <h2>Experimente novos sabores através de <strong>receitas veganas</strong></h2>
-        <SearchBar title="Procure uma receita"></SearchBar>
+        <h2>Try new flavors through <strong>vegan recipes</strong></h2>
+        <SearchBar title="Look for a recipe"></SearchBar>
       </Hero>
       <div className="container">
-        <RecipeList titleList="Adicionadas recentemente:" />
+        <RecipeList titleList="Recently added:" />
       </div>
       <Footer />
     </>

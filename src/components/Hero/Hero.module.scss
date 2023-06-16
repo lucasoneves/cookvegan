@@ -10,6 +10,7 @@
 
 .container {
   @include container;
+  padding: $container-padding;
 }
 
 .wallpaper {
