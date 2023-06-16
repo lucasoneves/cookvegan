@@ -1,11 +1,13 @@
 .search-bar {
   margin-top: 40px;
-  font-size: 20px;
+  font-size: 16px;
 
   input {
     font-size: inherit;
     padding: $main-padding;
     border-radius: $main-radius;
+    height: $input-height;
+    flex: 5;
   }
 }
 
@@ -13,4 +15,8 @@
   display: flex;
   gap: $main-gap;
   flex-wrap: wrap;
+}
+
+.button {
+  flex: 1;
 }

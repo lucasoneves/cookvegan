@@ -4,4 +4,13 @@
   font-size: 14px;
   font-family: 'Roboto', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   flex-wrap: wrap;
+
+  a {
+    color: $ending;
+    font-weight: bold;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
 }

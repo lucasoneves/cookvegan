@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { RecipeCard } from "../RecipeCard";
+import { Link } from "react-router-dom";
 
 import styles from "./RecipeList.module.scss";
+import buttonStyle from "../Button/Button.module.scss";
 
 type RecipeItem = {
   id: string;
@@ -32,20 +34,26 @@ export const RecipeList = ({ titleList }: { titleList: string }) => {
   }
   return (
     <div className={styles["wrapper"]}>
-        <h2 className={styles['title-list']}>{titleList}</h2>
+      <h2 className={styles["title-list"]}>{titleList}</h2>
       <div className={styles["recipe-list"]}>
         {recipeData.map((recipe) => {
           return (
             <RecipeCard
               key={recipe.id}
               title={recipe.title}
-              duration={`${new Date(recipe.duration).getMinutes()} minutos`}
+              duration={`${new Date(recipe.duration).getMinutes()} minutes`}
               altImg={recipe.title}
               thumb={recipe.thumb}
             />
           );
         })}
       </div>
+      <Link
+        className={`${buttonStyle.button} ${styles["link-all-recipes"]}`}
+        to="/recipes"
+      >
+        See all recipes
+      </Link>
     </div>
   );
 };

@@ -1,12 +1,13 @@
 
 :root {
   
-
+  
   --container-width: 940px;
 }
 
 .container {
   @include container;
+  padding: $container-padding;
 }
 
 body {

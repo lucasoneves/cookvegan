@@ -3,4 +3,11 @@
   padding: $main-padding;
   border-radius: $main-radius;
   color: invert($color: #000000);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: $input-height;
 }

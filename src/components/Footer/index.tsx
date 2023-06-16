@@ -19,7 +19,7 @@ export const Footer = () => {
           <nav>
             <ul>
               {menu.map((item) => (
-                <li key={item.path}></li>
+                <li key={item.path}><Link to={item.path}>{item.title}</Link></li>
               ))}
             </ul>
           </nav>

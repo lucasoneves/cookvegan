@@ -10,7 +10,7 @@ export const SearchBar = ({ title }: SearchBarProps) => {
     <div className={styles["search-bar"]}>
       <form action="" className={styles['form']}>
         <input type="search" placeholder={title} />
-        <Button btnTitle="Buscar" />
+        <Button btnTitle="Search" classes={styles['button']} />
       </form>
     </div>
   );
