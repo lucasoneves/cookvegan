@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from "react";
 import styles from "./Footer.module.scss";
 import navData from "../../data/nav";
@@ -18,7 +19,7 @@ export const Footer = () => {
           <nav>
             <ul>
               {menu.map((item) => (
-                <li key={item.path}><Link to={`/${item.path}`}>{item.title}</Link></li>
+                <li key={item.path}></li>
               ))}
             </ul>
           </nav>
