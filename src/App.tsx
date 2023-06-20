@@ -4,6 +4,7 @@ import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { RecipeList } from "./components/RecipeList";
 import { SearchBar } from "./components/SearchBar";
+import { SectionWhyVegan } from "./components/SectionWhyVegan";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <div className="container">
         <RecipeList titleList="Recently added:" />
       </div>
+      <SectionWhyVegan />
       <Footer />
     </>
   );
