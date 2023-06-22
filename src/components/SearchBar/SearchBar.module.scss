@@ -1,13 +1,18 @@
 .search-bar {
   margin-top: 40px;
   font-size: 16px;
+  width: 100%;
 
   input {
     font-size: inherit;
     padding: $main-padding;
-    border-radius: $main-radius;
+    border-radius: $radius;
     height: $input-height;
     flex: 5;
+  }
+
+  @media (min-width: $desktop) {
+    width: 60%;
   }
 }
 

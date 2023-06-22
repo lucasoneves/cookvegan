@@ -1,16 +1,17 @@
 $main-padding: 10px 20px;
-$main-radius: 8px;
-
 $main-gap: 15px;
 
 /* ==== COLOR PALLETE ==== */
 
-$keppel: #58b19f;
+$keppel: rgb(88, 177, 159);
+$keppel-alpha: rgb(88, 177, 159, 0.8);
+
 $spiro: #25ccf7;
 $sarawak: #f8efba;
 $falling: #cad3c8;
 $lake: #82589f;
-$ending: #182c61;
+$ending: rgb(24, 44, 97);
+$ending-alpha: rgba(24, 44, 97, 0.8);
 
 /* ==== INPUT AND BUTTON SIZES ==== */
 
@@ -19,3 +20,12 @@ $input-height: 44px;
 /* ==== Container ==== */
 
 $container-padding: 60px 15px;
+
+/* ==== Radius ==== */
+
+$radius: 12px;
+$radius-full: 50px;
+
+/* ==== Viewport ==== */
+
+$desktop: 960px;
