@@ -1,4 +1,5 @@
 import "./assets/css/App.scss";
+import { Category } from "./components/Category";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
@@ -18,6 +19,7 @@ function App() {
         <RecipeList titleList="Recently added:" />
       </div>
       <SectionWhyVegan />
+      <Category />
       <Footer />
     </>
   );
