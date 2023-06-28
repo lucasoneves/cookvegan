@@ -1,42 +1,23 @@
 import styles from "./Category.module.scss";
-import mealImage from '@/assets/images/thumb-meals.jpg';
+// import mealImage from '@/assets/images/thumb-meals.jpg';
+import { categoriesData } from "../../data/categories";
+import { useState } from "react";
 
 export const Category = () => {
+  const [categories, _] = useState(categoriesData);
   return (
     <section className={styles["category"]}>
       <div className="container">
         <h2 className={styles["title"]}>Categories</h2>
         <ul className={styles["category-list"]}>
-          <li className={styles["category-list--item"]} style={{ backgroundImage: `url(${mealImage})` }}>
-            <div className={styles["link"]}>
-              <a href="#">Salads</a>
-            </div>
-          </li>
-          <li className={styles["category-list--item"]}>
-            <div className={styles["link"]}>
-              <a href="#">Cakes</a>
-            </div>
-          </li>
-          <li className={styles["category-list--item"]}>
-            <div className={styles["link"]}>
-              <a href="#">Meals</a>
-            </div>
-          </li>
-          <li className={styles["category-list--item"]}>
-            <div className={styles["link"]}>
-              <a href="#">Desserts</a>
-            </div>
-          </li>
-          <li className={styles["category-list--item"]}>
-            <div className={styles["link"]}>
-              <a href="#">Protein</a>
-            </div>
-          </li>
-          <li className={styles["category-list--item"]}>
-            <div className={styles["link"]}>
-              <a href="#">Snacks</a>
-            </div>
-          </li> 
+          {categories?.map((category) => (
+            <li key={category.id} className={styles["category-list--item"]}>
+              <img src={category.thumb} alt={category.thumb} className={styles['category-list--thumb']} />
+              <div className={styles["link"]}>
+                <a href={category.path}>{category.name}</a>
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
     </section>
