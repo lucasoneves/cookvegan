@@ -2,6 +2,7 @@ import styles from "./Category.module.scss";
 import { useEffect, useState } from "react";
 import { getCategories, client } from "../../lib/sanity.ts"
 import imageUrlBuilder from '@sanity/image-url'
+import { Link } from "react-router-dom";
 
 type CategoryTypes = {
   path: string;
@@ -45,16 +46,17 @@ export const Category = () => {
         <h2 className={styles["title"]}>Categories</h2>
         <ul className={styles["category-list"]}>
           {categories?.map((category) => (
+            <Link to={category.path}>
             <li key={category.path} className={styles["category-list--item"]}>
+              <div className={styles["link"]}>
+                <a href={category.path}>{category.name}</a>
+              </div>
               <img
                 src={urlFor(category.thumb).url()}
                 alt={category.name}
                 className={styles["category-list--thumb"]}
               />
-              <div className={styles["link"]}>
-                <a href={category.path}>{category.name}</a>
-              </div>
-            </li>
+            </li></Link>
           ))}
         </ul>
       </div>
