@@ -1,6 +1,7 @@
 import styles from "./Category.module.scss";
 import { useEffect, useState } from "react";
 import { getCategories, client } from "../../lib/sanity.ts"
+import imageUrlBuilder from '@sanity/image-url'
 
 type CategoryTypes = {
   path: string;
@@ -13,6 +14,20 @@ type CategoryTypes = {
     };
   };
 };
+
+type ThumbType = {
+  _type: string;
+    asset: {
+      _ref: string;
+      _type: string;
+    };
+}
+
+const builder = imageUrlBuilder(client)
+
+function urlFor(source: ThumbType) {
+  return builder.image(source)
+}
 
 export const Category = () => {
   useEffect(() => {
@@ -32,7 +47,7 @@ export const Category = () => {
           {categories?.map((category) => (
             <li key={category.path} className={styles["category-list--item"]}>
               <img
-                src={category.thumb.asset._ref}
+                src={urlFor(category.thumb).url()}
                 alt={category.name}
                 className={styles["category-list--thumb"]}
               />
