@@ -1,3 +1,4 @@
+import { TitleSection } from "../Title";
 import styles from "./SectionWhyVegan.module.scss";
 
 export const SectionWhyVegan = () => {
@@ -6,7 +7,7 @@ export const SectionWhyVegan = () => {
       <div className={styles["mask"]}></div>
       <div className="container">
         <div className={styles["content"]}>
-          <h2>Why vegan?</h2>
+          <TitleSection>Why vegan?</TitleSection>
           <ul className={styles["list-reason-vegan"]}>
             <li>
               <span className={styles["list-reason-vegan--icon"]}>1</span>

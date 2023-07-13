@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { getCategories } from "./lib/sanity";
 import { CategoryTypes } from "./components/Category";
 import categoriesStyle from "./components/Category/Category.module.scss";
+import { TitleSection } from "./components/Title";
 
 function App() {
   useEffect(() => {
@@ -37,7 +38,7 @@ function App() {
       <SectionWhyVegan />
       <section className={categoriesStyle["category"]}>
         <div className="container">
-          <h2 className={categoriesStyle["title"]}>Categories</h2>
+          <TitleSection>Categories</TitleSection>
           <ul className={categoriesStyle["category-list"]}>
             {categories?.map((category) => {
               return (

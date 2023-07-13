@@ -15,7 +15,8 @@
 
   ul {
     display: flex;
-    gap: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
     margin: 40px 0;
     font-size: 14px;
@@ -26,6 +27,11 @@
       &:hover {
         opacity: .7;
       }
+    }
+
+    @media (min-width: 768px) {
+      gap: 50px;
+      flex-wrap: nowrap;
     }
   }
 }
