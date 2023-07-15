@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { getCategories } from "./lib/sanity";
 import { CategoryTypes } from "./components/Category";
 import SectionCategories from "./components/SectionCategories";
+import SectionSendRecipe from "./components/SectionSendRecipe";
 
 function App() {
   useEffect(() => {
@@ -35,6 +36,7 @@ function App() {
       </div>
       <SectionWhyVegan />
       <SectionCategories categories={categories} />
+      <SectionSendRecipe title="Send your recipe" description="Share your recipe and be part of our culinary community!" />
       <Footer />
     </>
   );
