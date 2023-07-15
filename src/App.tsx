@@ -1,5 +1,4 @@
 import "./assets/css/App.scss";
-import { Category } from "./components/Category";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
@@ -9,8 +8,7 @@ import { SectionWhyVegan } from "./components/SectionWhyVegan";
 import { useEffect, useState } from "react";
 import { getCategories } from "./lib/sanity";
 import { CategoryTypes } from "./components/Category";
-import categoriesStyle from "./components/Category/Category.module.scss";
-import { TitleSection } from "./components/Title";
+import SectionCategories from "./components/SectionCategories";
 
 function App() {
   useEffect(() => {
@@ -36,23 +34,7 @@ function App() {
         <RecipeList titleList="Recently added:" />
       </div>
       <SectionWhyVegan />
-      <section className={categoriesStyle["category"]}>
-        <div className="container">
-          <TitleSection>Categories</TitleSection>
-          <ul className={categoriesStyle["category-list"]}>
-            {categories?.map((category) => {
-              return (
-                <Category
-                  path={category.path}
-                  name={category.name}
-                  thumb={category.thumb}
-                />
-              );
-            })}
-          </ul>
-        </div>
-      </section>
-
+      <SectionCategories categories={categories} />
       <Footer />
     </>
   );
