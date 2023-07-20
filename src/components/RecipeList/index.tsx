@@ -3,7 +3,6 @@ import { RecipeCard } from "../RecipeCard";
 import { Link } from "react-router-dom";
 
 import styles from "./RecipeList.module.scss";
-import buttonStyle from "../Button/Button.module.scss";
 
 type RecipeItem = {
   id: string;
@@ -49,7 +48,7 @@ export const RecipeList = ({ titleList }: { titleList: string }) => {
         })}
       </div>
       <Link
-        className={`${buttonStyle.button} ${styles["link-all-recipes"]}`}
+        className={` bg-blue-800 p-5 rounded-lg text-white max-w-xs m-auto flex justify-center`}
         to="/recipes"
       >
         See all recipes
