@@ -34,7 +34,7 @@ export const Category = ({ path, name, thumb }: CategoryTypes) => {
     <Link to={`categories/${path}`}>
       <li key={path} className={styles["category-list--item"]}>
         <div className={styles["link"]}>
-          <a href={path}>{name}</a>
+          <span>{name}</span>
         </div>
         <img
           src={urlFor(thumb).url()}
