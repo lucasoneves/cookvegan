@@ -12,6 +12,7 @@ export default function SectionCategories({categories}: { categories: CategoryTy
             {categories?.map((category: CategoryTypes) => {
               return (
                 <Category
+                  key={category.name}
                   path={category.path}
                   name={category.name}
                   thumb={category.thumb}

@@ -1,9 +1,21 @@
+.navbar {
+  display: none;
+  @media (min-width: $tablet) {
+    display: flex;
+  }
+
+  &.active {
+    display: flex;
+  }
+}
+
 .navbar-list {
   display: flex;
   gap: 50px;
   font-size: 14px;
   font-family: 'Roboto', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-direction: column;
 
   a {
     color: $ending;
@@ -15,5 +27,10 @@
     &:hover {
       opacity: .8;
     }
+  }
+
+  @media (min-width: $tablet) {
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 }
