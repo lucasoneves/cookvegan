@@ -32,7 +32,7 @@ export const RecipeList = ({ titleList }: { titleList: string }) => {
     }
   }
   return (
-    <div className={styles["wrapper"]}>
+    <div className={`${styles["wrapper"]} mb-20`}>
       <h2 className={styles["title-list"]}>{titleList}</h2>
       <div className={styles["recipe-list"]}>
         {recipeData.map((recipe) => {

@@ -5,7 +5,7 @@ import { CategoryTypes } from "../Category";
 
 export default function SectionCategories({categories}: { categories: CategoryTypes[]}) {
   return (
-    <section className={categoriesStyle["category"]}>
+    <section className={`${categoriesStyle["category"]} pb-20`}>
         <div className="container">
           <TitleSection>Categories</TitleSection>
           <ul className={categoriesStyle["category-list"]}>

@@ -7,7 +7,7 @@ type HeroSectionProps = {
 
 export const Hero = ({ children }: HeroSectionProps) => {
   return (
-    <article className={styles["hero"]}>
+    <article className={`${styles["hero"]} mb-10`}>
       <div className={styles['hero-wrapper']}>
         <div className={styles["container"]}>
           {children}
