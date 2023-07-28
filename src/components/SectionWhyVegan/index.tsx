@@ -3,7 +3,7 @@ import styles from "./SectionWhyVegan.module.scss";
 
 export const SectionWhyVegan = () => {
   return (
-    <section className={styles["section-vegan"]}>
+    <section className={`${styles["section-vegan"]} pb-20`}>
       <div className={styles["mask"]}></div>
       <div className="container">
         <div className={styles["content"]}>
