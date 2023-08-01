@@ -11,7 +11,7 @@ export const Header = ({ logo }: HeaderProps) => {
   return (
     <header className={styles["header"]}>
       <div className={`${styles["container"]} container`}>
-        <h1>{logo}</h1>
+        <h1 className={styles['logo']}>{logo}</h1>
         <Navbar />
       </div>
     </header>

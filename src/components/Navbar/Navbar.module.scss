@@ -1,12 +1,30 @@
+
+$size-icon: 26px;
+
 .navbar {
   position: fixed;
   bottom: 0;
+  left: 0;
   z-index: 20;
   background-color: white;
+  width: 100%;
+  padding: 15px;
+  box-shadow: 0 0 10px #ccc;
+
+  @media (min-width: $tablet) {
+    position: initial;
+    width: auto;
+    box-shadow: none;
+
+    svg {
+      display: none;
+    }
+  }
 }
 
 .navbar-list {
   display: flex;
+  justify-content: space-between;
   gap: 50px;
   font-size: 14px;
   font-family: 'Roboto', 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -16,7 +34,7 @@
   a {
     color: $ending;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: lighter;
     letter-spacing: 1.2px;
 
@@ -28,8 +46,8 @@
 
 .link {
   svg {
-    width: 30px;
-    height: 30px;
+    width: $size-icon;
+    height: $size-icon;
   }
 }
 
