@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 :root {
-  
-  
   --container-width: 940px;
 }
 
@@ -13,9 +11,7 @@
   padding: $container-padding;
 }
 
-body {
-  font-family: 'Roboto', 'DM Sans', 'Helvetica', 'Arial', serif;
-}
+
 
 h1, h2, h3 {
   font-family: 'DM Sans', 'Helvetica', 'Arial', serif;

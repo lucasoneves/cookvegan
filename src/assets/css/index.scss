@@ -3,3 +3,7 @@
 @import "./normalize.css";
 @import '../sass/mixins';
 @import '../sass/variables';
+
+body {
+  font-family: 'Roboto', 'DM Sans', 'Helvetica', 'Arial', serif;
+}

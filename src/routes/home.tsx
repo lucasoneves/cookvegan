@@ -1,15 +1,13 @@
-import "./assets/css/App.scss";
-import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
-import { Hero } from "./components/Hero";
-import { RecipeList } from "./components/RecipeList";
-import { SearchBar } from "./components/SearchBar";
-import { SectionWhyVegan } from "./components/SectionWhyVegan";
+import "../assets/css/App.scss";
+import { Hero } from "../components/Hero";
+import { RecipeList } from "../components/RecipeList";
+import { SearchBar } from "../components/SearchBar";
+import { SectionWhyVegan } from "../components/SectionWhyVegan";
 import { useEffect, useState } from "react";
-import { getCategories } from "./lib/sanity";
-import { CategoryTypes } from "./components/Category";
-import SectionCategories from "./components/SectionCategories";
-import SectionSendRecipe from "./components/SectionSendRecipe";
+import { getCategories } from "../lib/sanity";
+import { CategoryTypes } from "../components/Category";
+import SectionCategories from "../components/SectionCategories";
+import SectionSendRecipe from "../components/SectionSendRecipe";
 
 function App() {
   useEffect(() => {
@@ -24,7 +22,7 @@ function App() {
 
   return (
     <>
-      <Header logo="Cook Vegan" />
+      
       <Hero>
         <h2>
           Try new flavors through <strong>vegan recipes</strong>
@@ -37,7 +35,6 @@ function App() {
       <SectionWhyVegan />
       <SectionCategories categories={categories} />
       <SectionSendRecipe title="Send your recipe" description="Share your recipe and be part of our culinary community!" />
-      <Footer />
     </>
   );
 }
