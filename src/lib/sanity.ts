@@ -14,6 +14,17 @@ export async function getCategories() {
   }
 }
 
+
+export async function getRecipes() {
+  try {
+    const response = await fetch(URL)
+    const data = await response.json();
+    return data.result;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 export const client = createClient({
   projectId: PROJECT_ID,
   dataset: DATASET,
