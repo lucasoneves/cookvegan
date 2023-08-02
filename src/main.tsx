@@ -7,7 +7,7 @@ import {
 import "../src/assets/css/index.scss";
 import Home from './Home';
 import BaseLayout from "./routes/root";
-import SendRecipePage from "./SendRecipe";
+import SendRecipePage from "./routes/SendRecipe";
 import ContactPage from "./routes/contact";
 import LoginPage from "./routes/login";
 import RecipesPage from "./routes/recipes";
