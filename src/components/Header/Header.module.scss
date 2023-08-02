@@ -1,9 +1,12 @@
 .header {
   height: 70px;
-  background-color: transparent;
+  background-color: #fff;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 20;
 
   .container {
     display: flex;
