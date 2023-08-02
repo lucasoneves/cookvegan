@@ -10,6 +10,8 @@ import BaseLayout from "./routes/root";
 import SendRecipePage from "./SendRecipe";
 import ContactPage from "./routes/contact";
 import LoginPage from "./routes/login";
+import RecipesPage from "./routes/recipes";
+import CategoriesPage from "./routes/categories";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/recipes",
-        element: <Home />,
+        element: <RecipesPage />,
       },
       {
         path: "/send-recipe",
@@ -38,6 +40,16 @@ const router = createBrowserRouter([
       },
     ]
   },
+  {
+    path: '/categories',
+    element: <BaseLayout />,
+    children: [
+      {
+        path: "/categories/:category",
+        element: <CategoriesPage />,
+      }
+    ]
+  }
   
 ]);
 
