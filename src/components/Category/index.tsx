@@ -2,6 +2,7 @@ import styles from "./Category.module.scss";
 import imageUrlBuilder from "@sanity/image-url";
 import { Link } from "react-router-dom";
 import { client } from "../../lib/sanity";
+import { ThumbType } from "../../lib/types/thumb";
 
 export type CategoryTypes = {
   path: string;
@@ -15,13 +16,7 @@ export type CategoryTypes = {
   };
 };
 
-type ThumbType = {
-  _type: string;
-  asset: {
-    _ref: string;
-    _type: string;
-  };
-};
+
 
 const builder = imageUrlBuilder(client);
 

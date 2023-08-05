@@ -1,3 +1,7 @@
+import { TitleSection } from "../components/Title";
+
 export default function RecipesPage() {
-  return <h2>Recipes Page</h2>
+  return <div className="container">
+    <TitleSection>Recipes</TitleSection>
+  </div>
 }

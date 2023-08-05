@@ -6,6 +6,7 @@ import { SectionWhyVegan } from "./components/SectionWhyVegan";
 import { useEffect, useState } from "react";
 import { getCategories } from "./lib/sanity";
 import { CategoryTypes } from "./components/Category";
+
 import SectionCategories from "./components/SectionCategories";
 import SectionSendRecipe from "./components/SectionSendRecipe";
 
@@ -19,6 +20,7 @@ function App() {
   }
 
   const [categories, setCategories] = useState<CategoryTypes[]>([]);
+
 
   return (
     <>

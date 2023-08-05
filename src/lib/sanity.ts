@@ -2,7 +2,9 @@ import {createClient} from '@sanity/client'
 const PROJECT_ID = "2z090rar";
 const DATASET = "production";
 const QUERY = encodeURIComponent('*[_type == "category"]');
+const QUERY_RECIPES = encodeURIComponent('*[_type == "recipe"]');
 const URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
+const URL_RECIPES = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY_RECIPES}`;
 
 export async function getCategories() {
   try {
@@ -17,7 +19,7 @@ export async function getCategories() {
 
 export async function getRecipes() {
   try {
-    const response = await fetch(URL)
+    const response = await fetch(URL_RECIPES)
     const data = await response.json();
     return data.result;
   } catch (error) {

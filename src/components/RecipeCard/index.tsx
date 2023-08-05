@@ -4,26 +4,21 @@ import { MdFavoriteBorder } from 'react-icons/md';
 
 export const RecipeCard = ({
   title,
-  duration,
-  thumb,
+  thumbnail,
   altImg,
 }: {
   title: string;
-  duration: string;
-  thumb: string;
+  thumbnail: string;
   altImg: string;
 }) => {
   return (
     <div className={styles["recipe-card"]}>
       <div className={styles["recipe-card__thumb"]}>
-        {thumb && <img src={thumb} alt={altImg} />}
+        {thumbnail && <img src={thumbnail} alt={altImg} />}
       </div>
       <div className={styles['recipe-card__content']}>
         <span className={styles["recipe-card__info--title"]}>{title}</span>
         <div className={styles["recipe-card__info"]}>
-          <span className={styles["recipe-card__info--duration"]}>
-            {duration}
-          </span>
           <span className={styles["recipe-card__info--favorite"]}>
             <MdFavoriteBorder />
           </span>
