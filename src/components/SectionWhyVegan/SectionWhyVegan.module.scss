@@ -23,14 +23,9 @@
 .list-reason-vegan {
   background-color: #f2f2f2;
   color: black;
-  padding: 64px;
+  padding: 30px;
   border-radius: $radius;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
   text-align: center;
-  gap: 80px;
-  flex-wrap: wrap;
 
   li {
     display: flex;
@@ -62,5 +57,9 @@
     align-items: center;
     justify-content: center;
     color: #fff;
+  }
+
+  @media (min-width: 768px) {
+    padding: 60px;
   }
 }

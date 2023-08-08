@@ -1,5 +1,9 @@
+import { TitleSection } from "../components/Title";
+
 export default function SendRecipePage() {
   return (
-    <h2>Send your recipe page</h2>
+    <div className="container">
+      <TitleSection>Send your recipe</TitleSection>
+    </div>
   )
 }

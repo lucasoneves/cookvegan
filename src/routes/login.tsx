@@ -1,7 +1,9 @@
+import { TitleSection } from "../components/Title";
+
 export default function LoginPage() {
   return (
-    <div>
-      <h2>Login</h2>
+    <div className="container">
+      <TitleSection>Login</TitleSection>
     </div>
   );
 }
