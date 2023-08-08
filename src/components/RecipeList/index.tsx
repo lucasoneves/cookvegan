@@ -24,7 +24,7 @@ export const RecipeList = ({ titleList }: { titleList: string }) => {
   }
   return (
     <div className={`${styles["wrapper"]} mb-20`}>
-      <h2 className={styles["title-list"]}>{titleList}</h2>
+      {titleList && <h2 className={styles["title-list"]}>{titleList}</h2>}
       <div className={styles["recipe-list"]}>
         {recipes.map((item => {
           return (<RecipeCard
@@ -36,12 +36,12 @@ export const RecipeList = ({ titleList }: { titleList: string }) => {
         }))}
         
       </div>
-      <Link
+      {window.location.pathname != '/recipes' && <Link
         className={` bg-blue-800 p-5 rounded-lg text-white max-w-xs m-auto flex justify-center`}
         to="/recipes"
       >
         See all recipes
-      </Link>
+      </Link>} 
     </div>
   );
 };

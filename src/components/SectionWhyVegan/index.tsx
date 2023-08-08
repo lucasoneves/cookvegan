@@ -8,7 +8,7 @@ export const SectionWhyVegan = () => {
       <div className="container">
         <div className={styles["content"]}>
           <TitleSection>Why vegan?</TitleSection>
-          <ul className={styles["list-reason-vegan"]}>
+          <ul className={`${styles["list-reason-vegan"]} grid gap-6 md:grid-cols-3`}>
             <li>
               <span className={styles["list-reason-vegan--icon"]}>1</span>
               <h3>Animals</h3>
