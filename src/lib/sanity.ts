@@ -2,13 +2,26 @@ import {createClient} from '@sanity/client'
 const PROJECT_ID = "2z090rar";
 const DATASET = "production";
 const QUERY = encodeURIComponent('*[_type == "category"]');
-const QUERY_RECIPES = encodeURIComponent('*[_type == "recipe"]');
-const URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
+const URL = 
 const URL_RECIPES = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY_RECIPES}`;
+
+
+
+const getRecipesHomePageQuery = {
+  query: encodeURIComponent('*[_type == "recipe"] | order(_createdAt desc)[0..2]'),  
+}
+
+const getRecipesPageQuery = {
+  query: encodeURIComponent('*[_type == "recipe"] | order(_createdAt desc)'), 
+}
+
+function urlToFecth(query: string) {
+  return `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${query}`;
+}
 
 export async function getCategories() {
   try {
-    const response = await fetch(URL)
+    const response = await fetch(urlToFecth(QUERY))
     const data = await response.json();
     return data.result;
   } catch (error) {
@@ -19,7 +32,17 @@ export async function getCategories() {
 
 export async function getRecipes() {
   try {
-    const response = await fetch(URL_RECIPES)
+    const response = await fetch(urlToFecth(getRecipesPageQuery.query))
+    const data = await response.json();
+    return data.result;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function getRecentRecipes() {
+  try {
+    const response = await fetch(urlToFecth(getRecipesHomePageQuery.query))
     const data = await response.json();
     return data.result;
   } catch (error) {
