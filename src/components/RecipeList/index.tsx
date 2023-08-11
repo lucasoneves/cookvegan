@@ -3,12 +3,12 @@ import { RecipeCard } from "../RecipeCard";
 import { Link } from "react-router-dom";
 import imageUrlBuilder from "@sanity/image-url";
 import { ThumbType } from "../../lib/types/thumb";
-import { client } from "../../lib/sanity";
+import { client, getRecentRecipes } from "../../lib/sanity";
 import styles from "./RecipeList.module.scss";
 import { RecipeType } from "../../lib/types/recipe";
 import { getRecipes } from "../../lib/sanity";
 
-export const RecipeList = ({ titleList }: { titleList: string }) => {
+export const RecipeList = ({ titleList, page }: { page: boolean, titleList: string }) => {
   const [recipes, setRecipes] = useState<RecipeType[]>([]);
 
   useEffect(() => {
@@ -19,7 +19,8 @@ export const RecipeList = ({ titleList }: { titleList: string }) => {
     return builder.image(source);
   }
   async function getRecipesData() {
-    const data = await getRecipes();
+    const route = page == true ? getRecipes() : getRecentRecipes();
+    const data = await route;
     setRecipes(data);
   }
   return (
