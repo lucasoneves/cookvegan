@@ -30,7 +30,7 @@ function App() {
         <SearchBar title="Look for a recipe"></SearchBar>
       </Hero>
       <div className="container">
-        <RecipeList titleList="Recently added:" />
+        <RecipeList page={true} titleList="Recently added:" />
       </div>
       <SectionWhyVegan />
       <SectionCategories categories={categories} />
