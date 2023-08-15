@@ -11,6 +11,7 @@ import SendRecipePage from "./routes/SendRecipe";
 import ContactPage from "./routes/contact";
 import LoginPage from "./routes/login";
 import RecipesPage from "./routes/recipes";
+import RecipeDetail from './routes/recipeDetail';
 import CategoriesPage from "./routes/categories";
 
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/recipes",
         element: <RecipesPage />,
+      },
+      {
+        path: "/recipe/:id",
+        element: <RecipeDetail />,
       },
       {
         path: "/send-recipe",
