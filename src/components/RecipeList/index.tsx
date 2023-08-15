@@ -30,6 +30,7 @@ export const RecipeList = ({ titleList, fullList }: { fullList: boolean, titleLi
       <div className={styles["recipe-list"]}>
         {recipes.map((item => {
           return (<RecipeCard
+            slug={item.slug}
             key={item.name}
             title={item.name}
             altImg={item.name}
