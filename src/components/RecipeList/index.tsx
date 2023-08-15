@@ -8,7 +8,7 @@ import styles from "./RecipeList.module.scss";
 import { RecipeType } from "../../lib/types/recipe";
 import { getRecipes } from "../../lib/sanity";
 
-export const RecipeList = ({ titleList, page }: { page: boolean, titleList: string }) => {
+export const RecipeList = ({ titleList, fullList }: { fullList: boolean, titleList: string }) => {
   const [recipes, setRecipes] = useState<RecipeType[]>([]);
 
   useEffect(() => {
@@ -19,7 +19,8 @@ export const RecipeList = ({ titleList, page }: { page: boolean, titleList: stri
     return builder.image(source);
   }
   async function getRecipesData() {
-    const route = page == true ? getRecipes() : getRecentRecipes();
+    const route = await fullList == true ? getRecipes() : getRecentRecipes();
+    console.log(fullList)
     const data = await route;
     setRecipes(data);
   }
