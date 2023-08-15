@@ -5,7 +5,7 @@ export default function RecipesPage() {
   return (
     <div className="container">
       <TitleSection>Recipes</TitleSection>
-      <RecipeList page={false} titleList="" />
+      <RecipeList fullList={true} titleList="" />
     </div>
   );
 }
