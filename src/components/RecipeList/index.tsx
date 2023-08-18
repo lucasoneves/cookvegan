@@ -8,19 +8,25 @@ import styles from "./RecipeList.module.scss";
 import { RecipeType } from "../../lib/types/recipe";
 import { getRecipes } from "../../lib/sanity";
 
-export const RecipeList = ({ titleList, fullList }: { fullList: boolean, titleList: string }) => {
+export const RecipeList = ({
+  titleList,
+  fullList,
+}: {
+  fullList: boolean;
+  titleList: string;
+}) => {
   const [recipes, setRecipes] = useState<RecipeType[]>([]);
 
   useEffect(() => {
     getRecipesData();
-  }, [])
+  }, []);
   const builder = imageUrlBuilder(client);
   function urlFor(source: ThumbType) {
     return builder.image(source);
   }
   async function getRecipesData() {
-    const route = await fullList == true ? getRecipes() : getRecentRecipes();
-    console.log(fullList)
+    const route = (await fullList) == true ? getRecipes() : getRecentRecipes();
+    console.log(fullList);
     const data = await route;
     setRecipes(data);
   }
@@ -28,23 +34,26 @@ export const RecipeList = ({ titleList, fullList }: { fullList: boolean, titleLi
     <div className={`${styles["wrapper"]} mb-20`}>
       {titleList && <h2 className={styles["title-list"]}>{titleList}</h2>}
       <div className={styles["recipe-list"]}>
-        {recipes.map((item => {
-          return (<RecipeCard
-            slug={item.slug}
-            key={item.name}
-            title={item.name}
-            altImg={item.name}
-            thumbnail={urlFor(item.thumbnail).url()}
-          />)
-        }))}
-        
+        {recipes.map((item) => {
+          return (
+            <RecipeCard
+              slug={item.slug}
+              key={item.name}
+              title={item.name}
+              altImg={item.name}
+              thumbnail={urlFor(item.thumbnail).url()}
+            />
+          );
+        })}
       </div>
-      {window.location.pathname != '/recipes' && <Link
-        className={` bg-blue-800 p-5 rounded-lg text-white max-w-xs m-auto flex justify-center`}
-        to="/recipes"
-      >
-        See all recipes
-      </Link>} 
+      {window.location.pathname != "/recipes" && (
+        <Link
+          className={` bg-blue-800 p-5 rounded-lg text-white max-w-xs m-auto flex justify-center`}
+          to="/recipes"
+        >
+          See all recipes
+        </Link>
+      )}
     </div>
   );
 };

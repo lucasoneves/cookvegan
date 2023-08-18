@@ -11,6 +11,10 @@ const getRecipesPageQuery = {
   query: encodeURIComponent('*[_type == "recipe"] | order(_createdAt desc)'), 
 }
 
+const recipeDetailEndpoint = {
+  query: encodeURIComponent(`*[_id == 'wonderful-veg-tahine'`), 
+}
+
 function urlToFecth(query: string) {
   return `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${query}`;
 }
@@ -39,6 +43,16 @@ export async function getRecipes() {
 export async function getRecentRecipes() {
   try {
     const response = await fetch(urlToFecth(getRecipesHomePageQuery.query))
+    const data = await response.json();
+    return data.result;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function getRecipeDetail() {
+  try {
+    const response = await fetch(urlToFecth(recipeDetailEndpoint.query))
     const data = await response.json();
     return data.result;
   } catch (error) {

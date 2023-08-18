@@ -30,6 +30,13 @@ const router = createBrowserRouter([
       {
         path: "/recipe/:id",
         element: <RecipeDetail />,
+        loader: async ({ request, params }) => {
+          console.log(params)
+          return fetch(
+            `https://2z090rar.api.sanity.io/v2021-06-07/data/query/production?query=*[_slug in [[${params.id}]]]`,
+            { signal: request.signal }
+          );
+        },
       },
       {
         path: "/send-recipe",
