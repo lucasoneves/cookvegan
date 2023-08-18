@@ -9,5 +9,5 @@ export type RecipeType = {
   };
   ingredients: string;
   methods: string;
-
+  slug: string;
 }
